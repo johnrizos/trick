@@ -1,0 +1,93 @@
+.navbar{
+    // box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%);
+    background-color:   #FFFFFF;
+    width:100%;
+    border:1px solid black;
+    height:30px;
+    box-sizing: border-box;
+
+
+    #toggle {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 110;
+        -webkit-touch-callout: none;
+        position:absolute;
+    }
+
+     span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        top:5px;
+        left:15px;
+        position: relative;
+        background: #5f2214;
+        border-radius: 3px;
+        z-index: 109;
+        -webkit-transform-origin: 4px 0;
+        transform-origin: 4px 0;
+        transition: background .5s cubic-bezier(.77,.2,.05,1),opacity .55s ease,-webkit-transform .5s cubic-bezier(.77,.2,.05,1);
+        transition: transform .5s cubic-bezier(.77,.2,.05,1),background .5s cubic-bezier(.77,.2,.05,1),opacity .55s ease;
+        transition: transform .5s cubic-bezier(.77,.2,.05,1),background .5s cubic-bezier(.77,.2,.05,1),opacity .55s ease,-webkit-transform .5s cubic-bezier(.77,.2,.05,1);
+    }
+
+
+
+    input:checked~span:nth-child(2) {
+        opacity: 1;
+        // z-index: 4;
+        -webkit-transform: rotate(
+    45deg
+    ) translate(-2px,-1px);
+        transform: rotate(
+    45deg
+    ) translate(-2px,-1px);
+        background: #F5F5F6;
+    }
+
+
+
+    input:checked~span:nth-child(3) {
+        opacity: 0;
+        -webkit-transform: rotate(
+    0deg
+    ) scale(.2);
+        transform: rotate(
+    0deg
+    ) scale(.2);
+    }
+
+  
+
+    input:checked~span:nth-child(4) {
+        opacity: 1;
+        // z-index: 4;
+        -webkit-transform: rotate(
+    -45deg
+    ) translate(1px,1px);
+        transform: rotate(
+    -45deg
+    ) translate(-1px,-3px);
+        background: #F5F5F6;
+    }
+
+}
+
+.navbar #toggle{
+    top:1px;
+    left:5px;
+}
+
+
+.navbar span{
+    top:5px;
+    left:15px;
+}
