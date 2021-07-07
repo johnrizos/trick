@@ -24,12 +24,24 @@ class Header extends Component{
     render(){
         return(
             <nav className="navbar">
+
+            <div id='div-span'>
             <input onClick={this.openLeftMenu} id="toggle" type="checkbox">
             </input>
-            <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div className='right-navbar'>
+                <ul>
+                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
+                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
+                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
+
+                </ul>
+            </div>
             </nav>
+
         );
     }
 }
