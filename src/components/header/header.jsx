@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import './header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+
+
 
 class Header extends Component{
     constructor(props) {
         super(props);
         this.state ={
-            menu: false
+            menu: false,
+            authetication:true
         };
     }
     openLeftMenu = ()=>{
@@ -34,9 +40,13 @@ class Header extends Component{
             </div>
             <div className='right-navbar'>
                 <ul>
-                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
-                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
-                    <li><button type="button" className='btn-log-reg'>Login/Register</button></li>
+                    <li>
+                    
+                    <button type="button" className='btn-log-reg'><FontAwesomeIcon icon={faSignInAlt} />  
+                     {" "}Σύνδεση/Εγγραφή</button></li>
+                    
+                    { this.state.authetication ? <li><div className='user-nav-header'>Douglas McGee{' '} <FontAwesomeIcon icon={faUserCircle} />  </div></li> : ''}
+                    
 
                 </ul>
             </div>
