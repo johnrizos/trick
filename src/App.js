@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './components/menu/menu';
+import Menu from './components/menu/menu-left';
 import Header from './components/header/header';
 // import logo from './logo.svg';
 

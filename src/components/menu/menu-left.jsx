@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './menu.scss';
+import './menu-left.scss';
+import logo from '../../img/logo.png';
+import bgLeftMenu from '../../img/menu-bg/coffee.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
@@ -32,6 +34,10 @@ class Menu extends Component {
     
     render(){return(
                 <nav className="menu-left ">
+                <div class="menu-left__background" style={{'backgroundImage': `url(${bgLeftMenu})`}}></div>
+                    <div className="logo">
+                    <img src={logo}  alt='logo' />
+                     </div>
                     <ul className="menu">
 
                     <li>
