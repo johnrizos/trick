@@ -1,0 +1,16 @@
+
+body{
+    font-family: 'EB Garamond',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+  }
+
+  $font-family-sans-serif:  'EB Garamond',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !default;
+
+
+
+$theme-colors: (
+    "main-1": #FF783C,
+    "danger": teal
+);
+
+@import "~bootstrap/scss/bootstrap";

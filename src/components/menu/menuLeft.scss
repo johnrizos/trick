@@ -1,0 +1,175 @@
+// $color-1: #1a1a1a;
+$color-1: #f5f5f6;
+
+$color-2: #fefefe;
+// $color-3: #ED1C5B;
+$color-3: #4caacd;
+
+.menu-left {
+  padding-top: 10px;
+  background-color: #4caacd;
+  // background-image: linear-gradient(15deg, #4CAACD 60%, #4CAACD 100%);
+  // background: linear-gradient(180deg, #4CAACD, #FF783C);
+  display: block;
+  position: fixed;
+  height: 100%;
+  max-width: 30%;
+
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+
+  &:before {
+    z-index: 3;
+    background: #fc5c7d;
+    background: linear-gradient(180deg, #4caacd, #ff783c);
+
+    //     background: linear-gradient(
+    // 180deg
+    // ,#6a82fb,#fc5c7d);
+    opacity: 0.77;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+
+  .menu-left__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    // background-image: url('https://reduction-admin.github.io/react-reduction/static/media/sidebar-4.80d4a4e5.jpg');
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  
+
+  ul {
+    padding-inline-start: 0px;
+  }
+
+  li {
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+    margin: 5px 10px;
+    cursor: pointer;
+    color:white;
+    &:hover, &:focus {
+      background: rgba(248, 249, 250, 0.15);
+      // background-color: #F5F5F6;
+      & span {
+        color: black;
+      }
+      & svg {
+        color: black;
+      }
+    }
+  }
+
+  .dropIcon{
+      margin: 0;
+      padding: 0;
+      transform: rotate(0deg);
+      transition: transform 0.2s linear; // effect on 0.3 millisecond
+  }
+
+
+  .rotate .dropIcon{
+    transform: rotate(90deg);
+    transition: transform 0.2s linear ; // effect on 0.3 millisecond
+  }
+
+  .menu-left__dropdown{
+    display: none;
+    opacity: 0;
+    transition: all 1s linear;
+  }
+
+
+  .rotate+.menu-left__dropdown{
+    display: block;
+    opacity: 1;
+    transition: all 1s linear;
+
+  }
+
+
+
+  span {
+    color: #f5f5f6;
+    font-family: "EB Garamond", serif;
+    font-size: 27px;
+    line-height: 37px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+  }
+
+  svg {
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: #f8f9fa;
+    padding-right: 0.5rem;
+  }
+
+  hr.sidebar-divider {
+    border: none;
+    border-top: 1px solid;
+    border-top-color: rgba(249, 249, 249, 0.3);
+    margin: 0rem 1rem 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .menu-left__dropdown .menu-left__list li{
+    color:white;
+    font-size: 20px;
+
+
+    &:hover {
+        background: rgba(248, 249, 250, 0.15);
+        // background-color: #F5F5F6;
+        color: black!important;
+      }
+    
+  }
+} //end of menu-left
+
+.display-left-menu {
+  // transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  visibility: visible;
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+  transition: transform 0.5s, opacity 0.5s;
+
+  opacity: 1;
+
+  // transition: opacity 0.3s linear 2s;
+}
