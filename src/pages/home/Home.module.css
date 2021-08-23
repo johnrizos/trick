@@ -99,3 +99,41 @@ button:active {
 .p {
   font-size: 25px;
 }
+
+
+.row{
+  display:flex;
+  /* justify-content: center; */
+  justify-content:  space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+.col{
+  margin:3%;
+  min-width: 25%;
+}
+
+.home-widget {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 1px #ffffff, rgb(0 0 0 / 15%) 0 0 10px 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding:2%;
+  margin: 3%;
+
+}
+
+.home-widget img{
+width:auto;
+height:auto;
+}
+
+.col-0{
+  margin:0%;
+}
