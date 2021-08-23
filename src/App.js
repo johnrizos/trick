@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.scss';
 
 import {
@@ -8,32 +8,29 @@ import {
   Link
 } from "react-router-dom";
 import MenuLeft from './components/menu/menuLeft';
-import Header from './components/header/header';
-import Home from './pages/Home/Home';
+import Header from './components/header/Header';
+import Home from './pages/home/Home';
 // import logo from './logo.svg';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = props => {
 
-  }
-  render() {
-    return (
+  return (
 
-      <div className="App">
-        <Header></Header>
-        <MenuLeft />
+    <div className="App">
+      <Header></Header>
+       <MenuLeft />
         <Router>
           <Route path="/">
             <Home />
           </Route>
         </Router>
+       
 
-      </div>
-    );
+    </div>
+  );
 
-  }
 }
+
 
 export default App;
