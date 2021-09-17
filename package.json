@@ -1,5 +1,6 @@
 {
   "name": "trick",
+  "homepage": "https://myusername.github.io/trick",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
