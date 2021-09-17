@@ -42,7 +42,7 @@ const Home = () => {
 
 
 
-    const loopCards = dummy.map((item, i) => <div key={item.id} className={classes.col}><Card name={item.name} /></div>);
+    const loopCards = dummy.map((item, i) => <div key={item.id} className="col-12 col-sm-6 col-lg-4    mb-4"><Card name={item.name} /></div>);
 
     return (
         <React.Fragment>
@@ -52,7 +52,7 @@ const Home = () => {
                     <div className={classes['homepage_top_content']}>
                         <h1 className={classes.title}>Ανακάλυψε Την Πόλη Σου</h1>
                         <p className={classes.subtitle}>Tο trick.gr σας βοηθάει να γνωρίσετε την πόλη σας, Ας εξερευνήσουμε...</p>
-                        <div className={classes.['div_button']}>
+                        <div className={classes['div_button']}>
                             <button className={classes.button}>
                                 Αναζήτηση
                             </button>
@@ -62,18 +62,18 @@ const Home = () => {
 
 
                 </section>
-                <section>
+                <section className="container">
                     <h2 className={`${classes['text-center']} ${classes['h2']}`}>Τα πιο δημοφιλή μέρη για έξοδο</h2>
                     <p className={`${classes['text-center']} ${classes['p']}`}>Ανακάλυψε μερικούς από τους πιο δημοφιλείς προορισμούς με βάση κριτικές και βαθμολογίες χρηστών.</p>
-                    <div className={classes.row}>
+                    <div className="row justify-content-around">
                         {loopCards}
                     </div>
                 </section>
-                <section>
+                <section class="container">
                     <h2 className={`${classes['text-center']} ${classes['h2']}`}>Πως λειτουργεί</h2>
                     <p className={`${classes['text-center']} ${classes['p']}`}>Φέρνουμε μαζί τα μέλη των επιχειρήσεων και της κοινότητας.</p>
-                    <div className={classes.row}>
-                        <div className={classes['col-0']}>
+                    <div className={"row justify-content-around"}>
+                        <div className={"col-12  col-lg-4 mb-4"}>
                             <div className={classes['home-widget']}>
                                 <img src={widget1} alt="" />
                                 <div class="home-widget-title">
@@ -85,7 +85,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className={classes['col-0']}>
+                        <div className={"col-12  col-lg-4 mb-4"}>
                             <div className={classes['home-widget']}>
                                 <img src={widget2} alt="" />
                                 <div class="home-widget-title">
@@ -96,7 +96,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={classes['col-0']}>
+                        <div className={"col-12  col-lg-4 mb-4"}>
                             <div className={classes['home-widget']}>
                                 <img src={widget3} alt="" />
                                 <div class="home-widget-title">
